@@ -1,0 +1,32 @@
+$text-color: #333;
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+header {
+  background-color: grey;
+  color: #fff;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+
+
