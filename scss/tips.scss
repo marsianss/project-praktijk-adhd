@@ -8,11 +8,11 @@
             max-width: 50%;
             display: flex;
             img{ 
-                max-width: 95%;
+                width: 95%;
                 height: auto; 
                 display: block;
                 border: solid rgba(0, 0, 0, 0);
-                border-radius: 1;
+                border-radius: 1rem;
                 margin-bottom: 1rem;
             }
         }
