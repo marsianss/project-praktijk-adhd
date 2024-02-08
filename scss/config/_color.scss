@@ -2,7 +2,8 @@
 
 $colors: (
     'navbar-background': #b3f5bc,
-    'button-hover': #ccf6d1
+    'button-hover': #ccf6d1,
+    'button-text': #000000
 );
 
 @function get-color($color: false) {
