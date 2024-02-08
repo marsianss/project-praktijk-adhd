@@ -1,13 +1,11 @@
-$text-color: #333;
-
 body {
   line-height: 1.5;
-  color: $text-color;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-h1,h2 {
+h1, h2 {
   font-weight: bold;
   margin-top: 0;
   padding-left: 15rem;
@@ -15,7 +13,7 @@ h1,h2 {
   color: orange;
 }
 
-p{
+p {
   padding-left: 15rem;
   max-width: 800px;
   font-size: larger;
@@ -25,24 +23,26 @@ header {
   padding: 1rem;
 }
 
-ul{
+ul {
   padding-left: 16rem;
 }
 
-ul p{
+ul p {
   padding-left: 1rem;
   margin-bottom: 30px;
 }
 
-.Whatwe li{
+.Whatwe li {
   font-size: larger;
 }
 
-.Values{
+.Values {
   font-size: larger;
 }
 
-.hero-img img{
+.hero-img img {
   width: 100%;
   max-height: 300px;
 }
+
+/*# sourceMappingURL=aboutus.css.map */

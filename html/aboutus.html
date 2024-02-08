@@ -7,38 +7,50 @@
     <link rel="stylesheet" href="../css/aboutus.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="icon" type="image/x-icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../scss/config/_color.scss">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>home</li>
-            <li>informatie</li>
-            <li>tips</li>
-            <li>faq</li>
-            <li>about us</li>
-            <li>contact</li>
-        </ul>
-    </nav>
-
-<header>
-    <div class="hero-img">
-        <img src="">
-    </div>
-    <h1>ABout us</h1>
+  <header>
+    <!-- Nav menu-->
+  <nav>
+    <ul>
+        <li class="col-2 button"><a href="index.html">home</a></li>
+        <li class="col-2 button"><a href="information.html">informatie</a></li>
+        <li class="col-2 button"><a href="tips.html">tips</a></li>
+        <li class="col-2 button"><a href="faq.html">faq</a></li>
+        <li class="col-2 button"><a href="aboutus.html">about us</a></li>
+        <li class="col-2 button"><a href="contact.html">contact</a></li>
+        <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
+    </ul>
+</nav>
 </header>
+
+<!--main content-->
 <main>
-    <section>
+
+  <!--Possible header img-->
+  <div class="hero-img">
+    <img src="https://t3.ftcdn.net/jpg/05/52/40/68/360_F_552406857_FEdkG4cXnSTsClOqqEvEqejguObRNJGR.jpg" alt="">
+    <div class="hero-text">
+    </div>
+</div>
+
+
+
       <h2>Who We Are?</h2>
+
+      <p>Established in 1989, ClearMind was born out of a collective vision to create a space where individuals with ADD can thrive.
+        Our founders, brought together their expertise in psychology, education, and advocacy to establish an organization that
+         breaks down barriers and champions the inherent capabilities of those with ADD.</p>
       <p>
         We are a community of ADHD patients who strive to support and empower
         each other. Our mission is to provide a safe and inclusive space for
         individuals with ADHD to share their experiences, learn from each other,
         and grow together.</p>
-    </section>
 
     <section>
       <h2>Our Values</h2>
-      <ul>
+      <ul class="Values">
         <li>Empathy and Understanding</li>
         <li>Inclusivity and Diversity</li>
         <li>Growth and Learning</li>
@@ -47,9 +59,12 @@
       </ul>
     </section>
 
+<!--img for page-->
+<img src="">
+
     <section>
         <h2>What do we do?</h2>
-        <ul>
+        <ul class="Whatwe">
             <li>Education and awareness :</li>
             <p>We provide comprehensive information about ADHD, helping you better understand its nuances, dispelling myths, and fostering a supportive community that embraces neurodiversity.</p>
             <li>Skill Development:</li>
@@ -64,12 +79,14 @@
             <p>We advocate for ADHD awareness and inclusivity in various spheres of life. Together, we work towards reducing stigma and fostering environments that embrace and accommodate neurodiversity.</p>
         </ul>
     </section>
+
     <section>
       <h2>Our Team</h2><p>
         Our team is composed of dedicated volunteers who are passionate about
         supporting the ADHD community. We come from diverse backgrounds and
         experiences, but we all share a common goal: to make a positive impact
         in the lives of ADHD patients.</p>
+        <p>If you have any questions for our team please refer to our <a href="contact.html">contact page!</a></p>
     </section>
   </main>
 </body>
