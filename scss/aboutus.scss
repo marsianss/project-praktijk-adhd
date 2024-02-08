@@ -25,6 +25,7 @@ h3{
   margin-top: 3rem;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
 }
 p{
   padding-left:35rem;
@@ -39,6 +40,7 @@ ul{
 
 ul li{
   font-size: larger;
+  font-weight: bold;
 }
 main {
   padding: 2rem;
@@ -68,6 +70,12 @@ section {
 
 .Whoare{
   text-align: center;
+  margin-left: -1rem;
+}
+
+.Whoaretext{
+  text-align: center;
+  margin-left: -5.5rem;
 }
 
 .ourValues{
@@ -77,4 +85,8 @@ section {
 
 .Values{
   text-align: left;
+}
+
+.whatwetext{
+  margin-left: -35rem;
 }
