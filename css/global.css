@@ -12,7 +12,6 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -22,20 +21,10 @@ nav ul li {
   list-style: none;
   padding: 0;
   margin: 0;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-grow: 1;
-}
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-family: Verdana;
-}
-nav ul .button:hover {
-  background-color: #ccf6d1;
 }
 nav img {
   width: 4.5rem;
@@ -86,6 +75,6 @@ nav img {
 
 .col-14 {
   width: 100%;
-}
+
 
 /*# sourceMappingURL=global.css.map */
