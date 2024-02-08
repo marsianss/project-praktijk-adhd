@@ -1,0 +1,14 @@
+@use "sass:map";
+
+$colors: (
+    'navbar-background': #b3f5bc,
+    'button-hover': #ccf6d1
+);
+
+@function get-color($color: false) {
+    @if $color {
+      @return map.get($colors, $color);
+    } @else {
+      @return $colors;
+    }
+  }

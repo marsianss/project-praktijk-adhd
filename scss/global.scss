@@ -1,8 +1,11 @@
+@use 'config/color';
+@use "sass:math";
+
 nav{
     position: fixed;
     display: flex;
     align-items: center;
-    background-color: #b3f5bc;
+    background-color: color.get-color('navbar-background');
     height: 5rem;
     width: 100%;
     top: 0;
@@ -12,6 +15,7 @@ nav{
         list-style: none;
         padding: 0;
         margin: 0;
+        height: 100%;
         display: flex;
         align-items: center; 
         justify-content: space-around;
@@ -21,10 +25,21 @@ nav{
             list-style: none;
             padding: 0;
             margin: 0;
+            height: 100%;
             display: flex;
             align-items: center; 
             justify-content: space-around;
             flex-grow: 1;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-family: Verdana;
+            }
+        }
+        .button:hover {
+            background-color: color.get-color('button-hover');
         }
     }
     
@@ -32,6 +47,13 @@ nav{
         width: 4.5rem;
         height: auto;
         justify-content: center;
-        margin-right: 1rem;
     }
+}
+
+$columncount: 14;
+
+@for $i from 1 through $columncount {
+  .col-#{$i} {
+    width: math.div(100%, math.div($columncount, $i));
+  }
 }
