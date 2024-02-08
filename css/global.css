@@ -33,4 +33,48 @@ nav img {
   margin-right: 1rem;
 }
 
+.col-4 {
+  width: 28.5714285714%;
+}
+
+.col-5 {
+  width: 35.7142857143%;
+}
+
+.col-6 {
+  width: 42.8571428571%;
+}
+
+.col-7 {
+  width: 50%;
+}
+
+.col-8 {
+  width: 57.1428571429%;
+}
+
+.col-9 {
+  width: 64.2857142857%;
+}
+
+.col-10 {
+  width: 71.4285714286%;
+}
+
+.col-11 {
+  width: 78.5714285714%;
+}
+
+.col-12 {
+  width: 85.7142857143%;
+}
+
+.col-13 {
+  width: 92.8571428571%;
+}
+
+.col-14 {
+  width: 100%;
+
+
 /*# sourceMappingURL=global.css.map */
