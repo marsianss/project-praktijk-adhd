@@ -60,6 +60,5 @@ $columncount: 14;
 @for $i from 1 through $columncount {
   .col-#{$i} {
     width: math.div(100%, math.div($columncount, $i));
-    
-  }
+}
 }
