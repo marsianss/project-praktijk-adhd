@@ -12,6 +12,7 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -21,16 +22,42 @@ nav ul li {
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-grow: 1;
 }
+nav ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-family: Verdana;
+}
+nav ul .button:hover {
+  background-color: #ccf6d1;
+}
 nav img {
   width: 4.5rem;
   height: auto;
   justify-content: center;
-  margin-right: 1rem;
+}
+
+.col-1 {
+  width: 7.1428571429%;
+}
+
+.col-2 {
+  width: 14.2857142857%;
+}
+
+.col-3 {
+  width: 21.4285714286%;
 }
 
 .col-4 {
@@ -75,6 +102,6 @@ nav img {
 
 .col-14 {
   width: 100%;
-
+}
 
 /*# sourceMappingURL=global.css.map */
