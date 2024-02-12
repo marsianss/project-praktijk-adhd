@@ -2,7 +2,12 @@
 
 $colors: (
     'navbar-background': #b3f5bc,
-    'button-hover': #ccf6d1
+    'button-hover': #ccf6d1,
+    'button-text': #000000,
+    'banner-border': #000000,
+    'inpage-button': #99dbef,
+    'inpage-button-hover': #bbe9f7,
+    'content-container': #e8dcdc
 );
 
 @function get-color($color: false) {
