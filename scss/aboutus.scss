@@ -6,31 +6,23 @@ body {
   color: $text-color;
   margin: 0;
   padding: 0;
+  
 }
 
-h1,h2 {
+h1,h2, h3 {
   font-weight: bold;
   margin-top: 0;
-  font-size: 35px;
   color: orange;
   margin-top: 3rem;
   justify-content: center;
   display: flex;
+  font-size: 30px;
 }
-h3{
-  font-weight: bold;
-  margin-top: 0;
-  display: flex;
-  font-size: 35px;
-  color: orange;
-  margin-top: 3rem;
-  justify-content: center;
-  display: flex;
-}
+
+
 p{
-  font-size: larger;
+  font-size: 17px;
 }
-
 
 .ourValues ul li, .Whatwedo li{
   font-size: larger;
@@ -54,6 +46,7 @@ section {
   width: 50%;
   margin-top: 1rem;
   border-radius: 1rem;
+  border-style: groove;
 }
 .ourTeam{
   margin: auto;
@@ -65,6 +58,7 @@ section {
   width: 50%;
   margin-top: 1rem;
   border-radius: 1rem;
+  border-style: groove;
 }
 
 .imgValues{
@@ -84,6 +78,7 @@ section {
   width: 50%;
   margin-top: 1rem;
   border-radius: 1rem;
+  border-style: groove;
 }
 
 .ourValues{
@@ -109,7 +104,8 @@ section {
   background-color: #e8dcdc;
   padding: 1rem;
   width: 50%;
-  border-radius: 5rem
+  border-radius: 5rem;
+  border-style: groove;
 }
 
 .hero-img{
@@ -149,6 +145,6 @@ section a {
   border-radius: 0.5rem;
 }
 
-a:hover {
+.Contactbutton:hover {
   background-color: color.get-color('inpage-button-hover');
 }
