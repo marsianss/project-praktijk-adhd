@@ -4,14 +4,6 @@ body {
     padding: 0;
     main {
         margin: 0;
-        img{
-            width: 100vw;
-            margin-top: 5rem;
-            height: 25rem;
-            object-fit: cover;
-            border-bottom: color.get-color('banner-border') solid;
-            border-top: color.get-color('banner-border') solid;
-        }
         section {
             margin: auto;
             display: flex;
