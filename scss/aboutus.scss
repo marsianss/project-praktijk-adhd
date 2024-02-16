@@ -6,19 +6,16 @@ body {
   color: $text-color;
   margin: 0;
   padding: 0;
-  
 }
 
-h1,h2, h3 {
+h2, h3 {
   font-weight: bold;
-  margin-top: 0;
   color: orange;
   margin-top: 3rem;
   justify-content: center;
   display: flex;
   font-size: 30px;
 }
-
 
 p{
   font-size: 17px;
@@ -28,6 +25,7 @@ p{
   font-size: larger;
   font-weight: bold;
 }
+
 main {
   padding: 2rem;
 }
@@ -108,30 +106,6 @@ section {
   border-style: groove;
 }
 
-.hero-img{
-  height: 500px;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://t3.ftcdn.net/jpg/05/52/40/68/360_F_552406857_FEdkG4cXnSTsClOqqEvEqejguObRNJGR.jpg");
-}
-.hero-text, h1{
-  text-align: center;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.logoHero {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: auto;
-}
 
 section a {
   text-decoration: none;
@@ -145,6 +119,10 @@ section a {
   border-radius: 0.5rem;
 }
 
-.Contactbutton:hover {
+.Contactbutton:hover{
   background-color: color.get-color('inpage-button-hover');
+}
+.Contactbutton{
+  color: orange;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
