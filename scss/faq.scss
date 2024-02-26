@@ -1,0 +1,23 @@
+
+$font-family: Arial, sans-serif;
+
+
+body {
+    font-family: $font-family;
+}
+
+
+$light-blue: #ADD8E6;
+
+#faq .faq-item h3 {
+    color: $light-blue;
+}
+
+
+#faq {
+    text-align: center; // Centreer de inhoud van het FAQ-gedeelte
+}
+
+#faq h2 {
+    margin-top: 50px; // Voeg wat ruimte toe boven de titel
+}
