@@ -1,9 +1,6 @@
-$text-color: #333;
-@use 'config/color';
-
 body {
   line-height: 1.5;
-  color: $text-color;
+  color: #333;
   margin: 0;
   padding: 0;
 }
@@ -17,11 +14,11 @@ h2, h3 {
   font-size: 30px;
 }
 
-p{
+p {
   font-size: 17px;
 }
 
-.ourValues ul li, .Whatwedo li{
+.ourValues ul li, .Whatwedo li {
   font-size: larger;
   font-weight: bold;
 }
@@ -34,19 +31,7 @@ section {
   margin-bottom: 2rem;
 }
 
-.ourTeamtext{
-  margin: auto;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  background-color: #e8dcdc;
-  padding: 1rem;
-  width: 50%;
-  margin-top: 1rem;
-  border-radius: 1rem;
-  border-style: groove;
-}
-.ourTeam{
+.ourTeamtext {
   margin: auto;
   display: flex;
   text-align: center;
@@ -59,14 +44,27 @@ section {
   border-style: groove;
 }
 
-.imgValues{
+.ourTeam {
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: #e8dcdc;
+  padding: 1rem;
+  width: 50%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border-style: groove;
+}
+
+.imgValues {
   width: auto;
   max-height: 300px;
   margin-left: 100px;
   border-radius: 100%;
 }
 
-.Whoaretext{
+.Whoaretext {
   margin: auto;
   display: flex;
   text-align: center;
@@ -79,15 +77,14 @@ section {
   border-style: groove;
 }
 
-.ourValues{
+.ourValues {
   display: flex;
   align-items: center;
   margin: auto;
   margin-left: 34rem;
 }
 
-
-.whatwetext{
+.whatwetext {
   margin: auto;
   display: flex;
   align-items: center;
@@ -95,7 +92,7 @@ section {
   max-width: 800px;
 }
 
-.Whatwedo{
+.Whatwedo {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -106,23 +103,25 @@ section {
   border-style: groove;
 }
 
-
 section a {
   text-decoration: none;
-  color: color.get-color('button-text');
+  color: #000000;
   font-weight: bold;
   font-family: Verdana;
   margin: auto;
-  background-color: color.get-color('inpage-button');
+  background-color: #99dbef;
   margin-top: 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
-.Contactbutton:hover{
-  background-color: color.get-color('inpage-button-hover');
+.Contactbutton:hover {
+  background-color: #bbe9f7;
 }
-.Contactbutton{
+
+.Contactbutton {
   color: orange;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
+
+/*# sourceMappingURL=aboutus.css.map */

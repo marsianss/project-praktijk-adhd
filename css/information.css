@@ -1,0 +1,31 @@
+#Information main {
+  margin-top: 6rem;
+}
+#Information main .image {
+  flex-wrap: wrap;
+  float: left;
+  max-width: 50%;
+  display: flex;
+}
+#Information main .image img {
+  width: 95%;
+  height: auto;
+  display: block;
+  border: solid rgba(0, 0, 0, 0);
+  margin-bottom: 1rem;
+}
+#Information main .text {
+  margin-left: 50%;
+  max-width: 50%;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=information.css.map */

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD</title>
+    <link rel="icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+<body>
+       <!--navbar-->
+       <nav>
+        <ul>
+            <li class="col-2 button"><a href="index.html">Home</a></li>
+            <li class="col-2 button"><a href="information.html">Informatie</a></li>
+            <li class="col-2 button"><a href="tips.html">Tips</a></li>
+            <li class="col-2 button"><a href="faq.html">FAQ</a></li>
+            <li class="col-2 button"><a href="aboutus.html">About Us</a></li>
+            <li class="col-2 button"><a href="contact.html">Contact</a></li>
+            <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
+        </ul>
+    </nav>
+<!--quiz-->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>ADHD Questionnaire</title>
+</head>
+<body>
+  <div class="container">
+    <h1>ADHD Questionnaire</h1>
+    <form id="adhdForm">
+      <label for="q1">1. Heb je vaak moeite om je te concentreren op taken of activiteiten?<br></label>
+      <input type="checkbox" id="q1" name="q1">
+
+      <label for="q2">2. Vergeet je regelmatig alledaagse taken, zoals sleutels, portemonnee of telefoon kwijtraken?<br></label>
+      <input type="checkbox" id="q2" name="q2">
+
+      <label for="q3">3. Voel je je vaak rusteloos en moeilijk om stil te zitten, vooral in situaties waar stilte wordt verwacht?<br></label>
+      <input type="checkbox" id="q3" name="q3">
+
+      <label for="q4">4. Heb je problemen met het organiseren van taken en activiteiten?<br></label>
+      <input type="checkbox" id="q4" name="q4">
+
+      <label for="q5">5. Word je vaak afgeleid door externe prikkels die anderen mogelijk niet opvallen?<br></label>
+      <input type="checkbox" id="q5" name="q5">
+
+      <label for="q6">6. Heb je moeite met het voltooien van taken, zelfs als je weet dat ze belangrijk zijn?<br></label>
+      <input type="checkbox" id="q6" name="q6">
+
+      <label for="q7">7. Praat je vaak te veel of onderbreek je anderen vaak tijdens gesprekken?<br></label>
+      <input type="checkbox" id="q7" name="q7">
+
+      <label for="q8">8. Begin je vaak aan meerdere taken, maar voltooi je er uiteindelijk weinig of geen?<br></label>
+      <input type="checkbox" id="q8" name="q8">
+
+      <label for="q9">9. Heb je moeite met het beheren van je tijd en kom je vaak te laat?<br></label>
+      <input type="checkbox" id="q9" name="q9">
+
+      <label for="q10">10. Ervaar je vaak impulsiviteit, waarbij je handelt zonder na te denken over de gevolgen?<br></label>
+      <input type="checkbox" id="q10" name="q10">
+
+      <button type="button" onclick="checkADHD()">Check ADHD</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkADHD() {
+      var yesCount = 0;
+
+      for (var i = 1; i <= 10; i++) {
+        var checkbox = document.getElementById('q' + i);
+
+        if (checkbox.checked) {
+          yesCount++;
+        }
+      }
+
+      var resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '';
+
+      if (yesCount > 5) {
+        resultDiv.innerHTML = '<p>Mogelijk heb je ADHD. Neem contact op met een huisarts.</p>';
+      } else {
+        resultDiv.innerHTML = '<p>Waarschijnlijk heb je geen ADHD, maar raadpleeg een professional voor zekerheid.</p>';
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+    
+</body>
+ 
+</html>
