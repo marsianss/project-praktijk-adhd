@@ -1,3 +1,9 @@
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("../img/Background Image.jpg");
+  font-family: Verdana;
+  line-height: 1.5;
+}
+
 nav {
   position: fixed;
   display: flex;
@@ -41,6 +47,9 @@ nav ul li a {
 }
 nav ul .button:hover {
   background-color: #ccf6d1;
+}
+nav ul .active {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 nav img {
   width: 4.5rem;
@@ -102,6 +111,35 @@ nav img {
 
 .col-14 {
   width: 100%;
+}
+
+.hero-img {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://t3.ftcdn.net/jpg/05/52/40/68/360_F_552406857_FEdkG4cXnSTsClOqqEvEqejguObRNJGR.jpg");
+}
+
+.hero-text {
+  top: 40%;
+  left: 50%;
+  position: absolute;
+}
+.hero-text h1 {
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.logoHero {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: auto;
 }
 
 /*# sourceMappingURL=global.css.map */

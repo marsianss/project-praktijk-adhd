@@ -1,3 +1,6 @@
+$text-color: #333;
+@use 'config/color';
+
 #Information{
     main{
         margin-top: 6rem;
@@ -31,13 +34,182 @@ $button-border: none;
 $button-border-radius: 4px;
 $button-cursor: pointer;
 
-// Apply styles to the button
-button {
-  background-color: $button-background-color;
-  color: $button-text-color;
-  padding: $button-padding;
-  border: $button-border;
-  border-radius: $button-border-radius;
-  cursor: $button-cursor;
-} 
+.content-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Zorg ervoor dat de content onder de navbar ligt */
+    margin-top: 80px; /* Afstand bovenaan om overlap met de navbar te voorkomen */
+  }
+  
+  .quizbutton {
+    display: inline-block;
+    padding: 30px 45px; /* Pas dit aan naar wens voor de gewenste grootte */
+    font-size: 18px; /* Pas dit aan naar wens voor de gewenste lettergrootte */
+    background-color: #3498db; /* Pas dit aan naar wens voor de gewenste achtergrondkleur */
+    color: #fff; /* Pas dit aan naar wens voor de gewenste tekstkleur */
+    border: none;
+    border-radius: 5px; /* Pas dit aan naar wens voor de gewenste afgeronde hoeken */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Vloeiende overgang bij hover */
+    text-decoration: none; /* Verwijder standaard onderstreping van link */
+  }
+  
+  .quizbutton:hover {
+    background-color: #2980b9; /* Pas dit aan naar wens voor de hover-achtergrondkleur */
+    color: #fff; /* Pas dit aan naar wens voor de hover-tekstkleur */
+  }
+  
+body {
+  line-height: 1.5;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
 
+h1,h2 {
+  font-weight: bold;
+  margin-top: 0;
+  font-size: 35px;
+  color: orange;
+  margin-top: 3rem;
+  justify-content: center;
+  display: flex;
+}
+h3{
+  font-weight: bold;
+  margin-top: 0;
+  display: flex;
+  font-size: 35px;
+  color: orange;
+  margin-top: 3rem;
+  justify-content: center;
+  display: flex;
+}
+p{
+  font-size: larger;
+}
+
+
+.ourValues ul li, .Whatwedo li{
+  font-size: larger;
+  font-weight: bold;
+}
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.ourTeamtext{
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: #e8dcdc;
+  padding: 1rem;
+  width: 50%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+.ourTeam{
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: #e8dcdc;
+  padding: 1rem;
+  width: 50%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.imgValues{
+  width: auto;
+  max-height: 300px;
+  margin-left: 100px;
+  border-radius: 100%;
+}
+
+.Whoaretext{
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: #e8dcdc;
+  padding: 1rem;
+  width: 50%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.ourValues{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-left: 34rem;
+}
+
+
+.whatwetext{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  max-width: 800px;
+}
+
+.Whatwedo{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #e8dcdc;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 5rem
+}
+
+.hero-img{
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://t3.ftcdn.net/jpg/05/52/40/68/360_F_552406857_FEdkG4cXnSTsClOqqEvEqejguObRNJGR.jpg");
+}
+.hero-text, h1{
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.logoHero {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: auto;
+}
+
+section a {
+  text-decoration: none;
+  color: color.get-color('button-text');
+  font-weight: bold;
+  font-family: Verdana;
+  margin: auto;
+  background-color: color.get-color('inpage-button');
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+a:hover {
+  background-color: color.get-color('inpage-button-hover');
+}
