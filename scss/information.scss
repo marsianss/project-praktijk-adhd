@@ -83,6 +83,18 @@ $button-cursor: pointer;
     z-index: 1; 
     margin-top: 80px; 
   }
+
+  .text-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: color.get-color('content-container');
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border-style: groove;
+  }
   
   .quizbutton {
     display: inline-block;
@@ -184,7 +196,9 @@ section {
   display: flex;
   text-align: center;
   flex-direction: column;
-  background-color: #e8dcdc;
+  background-color: color.get-color('content-container');
+  border-style: groove;
+
   padding: 1rem;
   width: 50%;
   margin-top: 1rem;
@@ -254,6 +268,3 @@ section a {
   border-radius: 0.5rem;
 }
 
-a:hover {
-  background-color: color.get-color('inpage-button-hover');
-}
