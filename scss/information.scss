@@ -40,28 +40,30 @@ $button-cursor: pointer;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1; /* Zorg ervoor dat de content onder de navbar ligt */
-    margin-top: 80px; /* Afstand bovenaan om overlap met de navbar te voorkomen */
+    z-index: 1; 
+    margin-top: 80px; 
   }
   
   .quizbutton {
     display: inline-block;
-    padding: 30px 45px; /* Pas dit aan naar wens voor de gewenste grootte */
-    font-size: 18px; /* Pas dit aan naar wens voor de gewenste lettergrootte */
-    background-color: #3498db; /* Pas dit aan naar wens voor de gewenste achtergrondkleur */
-    color: #fff; /* Pas dit aan naar wens voor de gewenste tekstkleur */
+    padding: 30px 45px; 
+    font-size: 18px; 
+    font-weight: bold;
+    background-color: #3498db; 
+    color: #fff; 
     border: none;
-    border-radius: 5px; /* Pas dit aan naar wens voor de gewenste afgeronde hoeken */
+    border-radius: 5px; 
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Vloeiende overgang bij hover */
-    text-decoration: none; /* Verwijder standaard onderstreping van link */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    text-decoration: none; 
+    margin-bottom: 10rem;
   }
   
   .quizbutton:hover {
-    background-color: #2980b9; /* Pas dit aan naar wens voor de hover-achtergrondkleur */
-    color: #fff; /* Pas dit aan naar wens voor de hover-tekstkleur */
+    background-color: #2980b9; 
+    color: #fff; 
   }
-  
+
 body {
   line-height: 1.5;
   color: $text-color;
