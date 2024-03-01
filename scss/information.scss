@@ -123,7 +123,7 @@ body {
   padding: 0;
 }
 
-h1,h2 {
+h2 {
   font-weight: bold;
   margin-top: 0;
   font-size: 35px;
@@ -197,7 +197,7 @@ section {
   text-align: center;
   flex-direction: column;
   background-color: color.get-color('content-container');
-  border-style: groove;
+      border-style: groove;
 
   padding: 1rem;
   width: 50%;
