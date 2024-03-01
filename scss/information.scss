@@ -1,6 +1,46 @@
 $text-color: #333;
 @use 'config/color';
 
+body {
+  margin: 0;
+  padding: 0;
+  main {
+      margin: 0;
+      section {
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          background-color: color.get-color('content-container');
+          padding: 1rem;
+          width: 50%;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          border-radius: 1rem;
+          p {
+              text-align: center;
+              margin: auto;
+              width: 90%;
+              font-family: Verdana;
+              font-weight: bold;
+          }
+          a {
+              text-decoration: none;
+              color: color.get-color('button-text');
+              font-weight: bold;
+              font-family: Verdana;
+              margin: auto;
+              background-color: color.get-color('inpage-button');
+              margin-top: 1rem;
+              padding: 0.5rem;
+              border-radius: 0.5rem;
+          }
+          a:hover {
+              background-color: color.get-color('inpage-button-hover');
+          }
+      }
+  }
+}
+
 #Information{
     main{
         margin-top: 6rem;
