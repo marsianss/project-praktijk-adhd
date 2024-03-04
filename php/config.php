@@ -2,7 +2,7 @@
 
 $dbHost = 'localhost';
 
-$dbName = 'adhd registranten';
+$dbName = 'adhd_quiz';
 
 $dbUser = 'justin';
 
