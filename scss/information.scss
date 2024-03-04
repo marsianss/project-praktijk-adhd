@@ -127,7 +127,7 @@ h2 {
   font-weight: bold;
   margin-top: 0;
   font-size: 35px;
-  color: orange;
+  color: color.get-color('title-color');
   margin-top: 3rem;
   justify-content: center;
   display: flex;
@@ -137,7 +137,7 @@ h3{
   margin-top: 0;
   display: flex;
   font-size: 35px;
-  color: orange;
+  color: color.get-color('title-color');
   margin-top: 3rem;
   justify-content: center;
   display: flex;

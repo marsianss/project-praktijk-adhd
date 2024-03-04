@@ -7,7 +7,8 @@ $colors: (
     'banner-border': #000000,
     'inpage-button': #99dbef,
     'inpage-button-hover': #bbe9f7,
-    'content-container': #e8dcdc
+    'content-container': #e8dcdc,
+    'title-color': green
 );
 
 @function get-color($color: false) {
@@ -17,3 +18,4 @@ $colors: (
       @return $colors;
     }
   }
+  
