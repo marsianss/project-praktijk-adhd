@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>Login</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="col-2 button"><a href="index.html">Home <span></span></a></li>
+            <li class="col-2 button"><a href="information.html">Informatie <span></span></a></li>
+            <li class="col-2 button"><a href="tips.html">Tips <span></span></a></li>
+            <li class="col-2 button"><a href="faq.html">FAQ <span></span></a></li>
+            <li class="col-2 button"><a href="aboutus.html">About Us <span></span></a></li>
+            <li class="col-2 button"><a href="contact.html">Contact <span></span></a></li>
+            <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
+        </ul>
+    </nav>
+    <h2>Login</h2>
+    <form method="post" action="../php/login.php">
+        <label for="username">Gebruikersnaam:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Wachtwoord:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

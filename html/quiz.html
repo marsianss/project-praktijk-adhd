@@ -5,61 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADHD</title>
     <link rel="icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/quiz.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-          <li class="col-2 button"><a href="index.html">Home</a></li>
-          <li class="col-2 button"><a href="information.html">Informatie</a></li>
-          <li class="col-2 button"><a href="tips.html">Tips</a></li>
-          <li class="col-2 button"><a href="faq.html">Faq</a></li>
-          <li class="col-2 button"><a href="aboutus.html">About us</a></li>
-          <li class="col-2 button"><a href="contact.html">Contact</a></li>
-          <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
-      </ul>
-  </nav>
-</header>
+       <!--navbar-->
+       <nav>
+        <ul>
+            <li class="col-2 button"><a href="index.html">Home <span></span></a></li>
+            <li class="col-2 button"><a href="information.html">Informatie <span></span></a></li>
+            <li class="col-2 button"><a href="tips.html">Tips <span></span></a></li>
+            <li class="col-2 button"><a href="faq.html">FAQ <span></span></a></li>
+            <li class="col-2 button"><a href="aboutus.html">About Us <span></span></a></li>
+            <li class="col-2 button"><a href="contact.html">Contact <span></span></a></li>
+            <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
+        </ul>
+    </nav>
+<!--quiz-->
   <div class="container">
     <h1>ADHD Questionnaire</h1>
-    <form id="adhdForm">
+    <form id="adhdForm" method="post" action="../php/create.php">
+      <label for="fullname">Volledige naam: </label>
+      <input type="text" name="fullname" id="fullname" required><br><br>
+
+      <label for="email">E-mail: </label>
+      <input type="email" name="email" id="email" required><br><br>
+
       <label for="q1">1. Heb je vaak moeite om je te concentreren op taken of activiteiten?<br></label>
-      <input type="checkbox" id="q1" name="q1">
+      <div class="radioGroup">
+        <input type="radio" id="q1_true" name="q1" value="true">
+        <label for="q1_true">Ja</label>
+        <input type="radio" id="q1_false" name="q1" value="false">
+        <label for="q1_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q2">2. Vergeet je regelmatig alledaagse taken, zoals sleutels, portemonnee of telefoon kwijtraken?<br></label>
-      <input type="checkbox" id="q2" name="q2">
+      <div class="radioGroup">
+        <input type="radio" id="q2_true" name="q2" value="true">
+        <label for="q2_true">Ja</label>
+        <input type="radio" id="q2_false" name="q2" value="false">
+        <label for="q2_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q3">3. Voel je je vaak rusteloos en moeilijk om stil te zitten, vooral in situaties waar stilte wordt verwacht?<br></label>
-      <input type="checkbox" id="q3" name="q3">
+      <div class="radioGroup">
+        <input type="radio" id="q3_true" name="q3" value="true">
+        <label for="q3_true">Ja</label>
+        <input type="radio" id="q3_false" name="q3" value="false">
+        <label for="q3_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q4">4. Heb je problemen met het organiseren van taken en activiteiten?<br></label>
-      <input type="checkbox" id="q4" name="q4">
+      <div class="radioGroup">
+        <input type="radio" id="q4_true" name="q4" value="true">
+        <label for="q4_true">Ja</label>
+        <input type="radio" id="q4_false" name="q4" value="false">
+        <label for="q4_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q5">5. Word je vaak afgeleid door externe prikkels die anderen mogelijk niet opvallen?<br></label>
-      <input type="checkbox" id="q5" name="q5">
+      <div class="radioGroup">
+        <input type="radio" id="q5_true" name="q5" value="true">
+        <label for="q5_true">Ja</label>
+        <input type="radio" id="q5_false" name="q5" value="false">
+        <label for="q5_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q6">6. Heb je moeite met het voltooien van taken, zelfs als je weet dat ze belangrijk zijn?<br></label>
-      <input type="checkbox" id="q6" name="q6">
+      <div class="radioGroup">
+        <input type="radio" id="q6_true" name="q6" value="true">
+        <label for="q6_true">Ja</label>
+        <input type="radio" id="q6_false" name="q6" value="false">
+        <label for="q6_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q7">7. Praat je vaak te veel of onderbreek je anderen vaak tijdens gesprekken?<br></label>
-      <input type="checkbox" id="q7" name="q7">
+      <div class="radioGroup">
+        <input type="radio" id="q7_true" name="q7" value="true">
+        <label for="q7_true">Ja</label>
+        <input type="radio" id="q7_false" name="q7" value="false">
+        <label for="q7_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q8">8. Begin je vaak aan meerdere taken, maar voltooi je er uiteindelijk weinig of geen?<br></label>
-      <input type="checkbox" id="q8" name="q8">
+      <div class="radioGroup">
+        <input type="radio" id="q8_true" name="q8" value="true">
+        <label for="q8_true">Ja</label>
+        <input type="radio" id="q8_false" name="q8" value="false">
+        <label for="q8_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q9">9. Heb je moeite met het beheren van je tijd en kom je vaak te laat?<br></label>
-      <input type="checkbox" id="q9" name="q9">
+      <div class="radioGroup">
+        <input type="radio" id="q9_true" name="q9" value="true">
+        <label for="q9_true">Ja</label>
+        <input type="radio" id="q9_false" name="q9" value="false">
+        <label for="q9_false">Nee</label>
+      </div>
+      <br>
 
       <label for="q10">10. Ervaar je vaak impulsiviteit, waarbij je handelt zonder na te denken over de gevolgen?<br></label>
-      <input type="checkbox" id="q10" name="q10">
+      <div class="radioGroup">
+        <input type="radio" id="q10_true" name="q10" value="true">
+        <label for="q10_true">Ja</label>
+        <input type="radio" id="q10_false" name="q10" value="false">
+        <label for="q10_false">Nee</label>
+      </div>
+      <br>
 
-      <button type="button" onclick="checkADHD()">Check ADHD</button>
+      <input type="submit" value="Check ADHD" onclick="checkADHD()">
     </form>
     <div id="result"></div>
+    <br><br>
+    <a href="login.html">resultaten voor mods</a>
   </div>
-    <!--hier nog naar kijken; meer info toevoegen!-->
+
+
+  
+
   <script>
     function checkADHD() {
       var yesCount = 0;
@@ -76,7 +148,7 @@
       resultDiv.innerHTML = '';
 
       if (yesCount > 5) {
-        resultDiv.innerHTML = '<p>Mogelijk heb je ADHD; je zou contact kunnen opnemen.</p>';
+        resultDiv.innerHTML = '<p>Mogelijk heb je ADHD. Neem contact op met een huisarts.</p>';
       } else {
         resultDiv.innerHTML = '<p>Waarschijnlijk heb je geen ADHD, maar raadpleeg een professional voor zekerheid.</p>';
       }
@@ -84,4 +156,3 @@
   </script>
 </body>
 </html>
-
