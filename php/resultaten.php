@@ -114,5 +114,7 @@ $result = $conn->query($sql);
         }
     ?>
     </form>
+    <br>
+    <a href="../html/index.html">Return to Home Page</a>
 </body>
 </html>
