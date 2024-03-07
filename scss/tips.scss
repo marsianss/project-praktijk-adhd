@@ -16,22 +16,32 @@ body {
             img {
                 max-height: 100%;
                 object-fit: contain;
+                margin: 2rem;
             }
             .text-container {
                 margin: auto;
                 display: flex;
                 flex-direction: column;
                 background-color: color.get-color('content-container');
-                padding: 1rem;
                 margin-top: 1rem;
                 margin-bottom: 1rem;
                 border-radius: 1rem;
                 border-style: groove;
+                .title-background {
+                    background-color: color.get-color('title-background');
+                    width: auto;
+                    border-radius: 1rem 1rem 0 0;
+                }
+                h2 {
+                    margin: 0.5rem;
+                    margin-top: 1rem;
+                }
                 p {
                     text-align: left;
                     margin: auto;
                     width: 90%;
                     font-family: Verdana;
+                    margin-bottom: 1rem;
                 }
             }
         }

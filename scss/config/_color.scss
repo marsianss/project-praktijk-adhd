@@ -8,7 +8,8 @@ $colors: (
     'inpage-button': #99dbef,
     'inpage-button-hover': #bbe9f7,
     'content-container': #e8dcdc,
-    'title-color': green
+    'title-color': green,
+    'title-background': #c1c0c0
 );
 
 @function get-color($color: false) {
