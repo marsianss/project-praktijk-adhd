@@ -205,12 +205,6 @@ section {
   border-radius: 1rem;
 }
 
-.ourValues{
-  display: flex;
-  align-items: center;
-  margin: auto;
-  margin-left: 34rem;
-}
 
 
 .whatwetext{
@@ -268,3 +262,28 @@ section a {
   border-radius: 0.5rem;
 }
 
+.logoInfo {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: auto;
+}
+
+.Oorzaken-img{
+  border-radius: 2rem;
+}
+
+.Introtext p{
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: color.get-color('content-container');
+  padding: 1rem;
+  width: 50%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border-style: groove;
+}
