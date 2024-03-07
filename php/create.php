@@ -46,25 +46,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Bereken het aantal aangevinkte checkboxen
             $num_checked = 0;
             for ($i = 1; $i <= 10; $i++) {
-                if (isset($_POST['q' . $i]) && $_POST['q' . $i] == 'X') {
+                if (isset($_POST['q' . $i]) && $_POST['q' . $i] == 'true') {
                     $num_checked++;
                 }
             }
-            
             // Bepaal de boodschap op basis van het aantal aangevinkte checkboxen
             $message = '';
             if ($num_checked > 5) {
                 $message = "<p>$fullname, mogelijk heb je ADHD. Neem contact op met een huisarts.</p>";
-                $possible_adhd = 1; // Indien mogelijk ADHD, zet de waarde op 1
+                $possible_adhd = $num_checked > 5 ? 1 : 0; // Indien mogelijk ADHD, zet de waarde op 1
             } else {
                 $message = "<p>$fullname, waarschijnlijk heb je geen ADHD, maar raadpleeg een professional voor zekerheid.</p>";
-                $possible_adhd = 0; // Indien geen ADHD, zet de waarde op 0
+                $possible_adhd = $num_checked > 5 ? 1 : 0; // Indien geen ADHD, zet de waarde op 0
             }
             
             echo $message;
             
             // Update de database met de mogelijke ADHD-waarde
-            $update_sql = "UPDATE adhd_responses SET mogelijk_adhd = :possible_adhd WHERE fullname = :fullname AND email = :email";
+            $update_sql = "UPDATE adhd_responses SET Mogelijk_adhd = :possible_adhd WHERE fullname = :fullname AND email = :email";
             $update_statement = $pdo->prepare($update_sql);
             $update_statement->bindValue(':possible_adhd', $possible_adhd, PDO::PARAM_INT);
             $update_statement->bindValue(':fullname', $_POST['fullname'] ?? null, PDO::PARAM_STR);
