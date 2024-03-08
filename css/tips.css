@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+body main {
+  text-align: center;
+}
+body main section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body main section img, body main section .text-container {
+  width: 45%;
+  margin: 0.5%;
+}
+body main section img {
+  max-height: 100%;
+  object-fit: contain;
+}
+body main section .text-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #e8dcdc;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border-style: groove;
+}
+body main section .text-container p {
+  text-align: left;
+  margin: auto;
+  width: 90%;
+  font-family: Verdana;
+}
+body main .reverse {
+  flex-direction: row-reverse;
+}
+
+h1, h2 {
+  color: green;
+}
+
+/*# sourceMappingURL=tips.css.map */
