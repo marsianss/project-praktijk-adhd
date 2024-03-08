@@ -21,9 +21,10 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Resultaten</title>
+    <link rel="icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/global.css">
 </head>
 <body>
     <h2>ADHD Resultaten</h2>
@@ -66,5 +67,54 @@ $result = $conn->query($sql);
             $conn->close();
             ?>
     </table>
+    <br>
+    <form method="post" action="">
+        <label for="column">Procent wel/niet van:</label>
+        <select name="column" id="column">
+            <option value="q1">q1</option>
+            <option value="q2">q2</option>
+            <option value="q3">q3</option>
+            <option value="q4">q4</option>
+            <option value="q5">q5</option>
+            <option value="q6">q6</option>
+            <option value="q7">q7</option>
+            <option value="q8">q8</option>
+            <option value="q9">q9</option>
+            <option value="q10">q10</option>
+            <option value="Mogelijk_adhd">Mogelijk_adhd</option>
+        </select>
+        <input type="submit" value="Bereken percentage">
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $selectedColumn = $_POST['column'];
+            $truePercentage = calculatePercentage($result, $selectedColumn, '1');
+            $falsePercentage = calculatePercentage($result, $selectedColumn, '0');
+            echo "<p> </p>";
+            echo "<p> </p>";
+            if($selectedColumn == "Mogelijk_adhd"){
+                echo "<p>Percentage wel $selectedColumn: $truePercentage%</p>";
+                echo "<p>Percentage niet $selectedColumn: $truePercentage%</p>";
+            } else {
+                echo "<p>Percentage 'true' antwoorden voor $selectedColumn: $truePercentage%</p>";
+                echo "<p>Percentage 'false' antwoorden voor $selectedColumn: $falsePercentage%</p>";
+            }
+        }
+
+        // Functie om het percentage "true" of "false" antwoorden te berekenen
+        function calculatePercentage($result, $columnName, $value) {
+            $totalRows = $result->num_rows;
+            $count = 0;
+            $result->data_seek(0); // Terugkeren naar het begin van de resultaten
+            while($row = $result->fetch_assoc()) {
+                if ($row[$columnName] === $value) {
+                    $count++;
+                }
+            }
+            return ($count / $totalRows) * 100;
+        }
+    ?>
+    </form>
+    <br>
+    <a href="../html/index.html">Return to Home Page</a>
 </body>
 </html>
