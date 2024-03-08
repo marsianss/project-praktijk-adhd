@@ -299,13 +299,14 @@ section a {
 }
 
 .dropdown {
-  position: relative;
+  position: static;
   display: inline-block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  z-index: -1; 
   background-color: #f1f1f1;
   min-width: 160px;
 }
