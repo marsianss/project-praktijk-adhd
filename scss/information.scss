@@ -1,6 +1,10 @@
 $text-color: #333;
 @use 'config/color';
 
+nav { 
+  z-index: 1; 
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -306,7 +310,7 @@ section a {
 .dropdown-content {
   display: none;
   position: absolute;
-  z-index: -1; 
+  z-index: auto; 
   background-color: #f1f1f1;
   min-width: 160px;
 }
@@ -326,3 +330,4 @@ section a {
 .dwa{
   float: left;
 }
+
