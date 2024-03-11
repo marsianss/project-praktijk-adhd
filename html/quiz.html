@@ -122,11 +122,11 @@
       </div>
       <br>
 
-      <input type="submit" value="Check ADHD" onclick="checkADHD()">
+      <input id="button" type="submit" value="Check ADHD" onclick="checkADHD()">
     </form>
     <div id="result"></div>
     <br><br>
-    <a href="login.html">resultaten voor mods</a>
+    <a href="login.html" class="mod">resultaten voor mods</a>
   </div>
 
 
@@ -152,6 +152,9 @@
       } else {
         resultDiv.innerHTML = '<p>Waarschijnlijk heb je geen ADHD, maar raadpleeg een professional voor zekerheid.</p>';
       }
+    }
+    window.onload = function() {
+            document.body.style.display = "block";
     }
   </script>
 </body>
