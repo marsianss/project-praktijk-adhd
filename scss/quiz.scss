@@ -2,10 +2,14 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
   
   .container {
@@ -28,7 +32,7 @@ body {
     margin-right: 5px;
   }
   
-  button {
+  #button {
     background-color: #4caf50;
     color: #fff;
     padding: 10px 20px;
@@ -42,3 +46,21 @@ body {
     color: #ff5733;
   }
 
+  .mod{
+    text-decoration: none;
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .radioGroup {
+    display: flex; /* Display radio buttons and labels in a row */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Add some space between radio groups */
+}
+
+.radioGroup input[type="radio"] {
+    margin-right: 5px;
+}

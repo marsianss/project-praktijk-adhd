@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 07 mrt 2024 om 10:05
+-- Gegenereerd op: 11 mrt 2024 om 15:33
 -- Serverversie: 8.0.31
 -- PHP-versie: 8.0.26
 
@@ -69,14 +69,15 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(2, 'Justin', '$2y$10$TxFehbXivT.rzThSz813zu09oSWmqxJgC8Z1DDSDmI/ahj/EkF/Iu');
+(2, 'Justin', '$2y$10$UZl23EL904LObUHMRECgguO21wFkXlejgmWA/W8kNxIem1bR4uKsK'),
+(3, 'Wassim', 'balzak123');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
