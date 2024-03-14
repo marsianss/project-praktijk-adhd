@@ -297,14 +297,18 @@ section a {
 .dropbutton {
   background-color: green;
   color: white;
-  padding: 16px;
+  padding: 20px;
   font-size: 16px;
   border: none;
+  width: 150%;
+  border-radius: 10rem;
+  margin-left: 1rem;
 }
 
 .dropdown {
   position: static;
   display: inline-block;
+  margin-top: 20px;
 }
 
 .dropdown-content {
@@ -324,10 +328,6 @@ section a {
 }
 
 
-.dropdown-content a:hover {background-color: white;}
+.dropdown-content a:hover {background-color: #e8dcdc;}
 .dropdown:hover .dropdown-content {display: block;}
-
-.dwa{
-  float: left;
-}
 
