@@ -83,7 +83,7 @@ section {
   display: flex;
   align-items: center;
   margin: auto;
-  margin-left: 34rem;
+  justify-content: center;
 }
 
 
@@ -93,17 +93,6 @@ section {
   align-items: center;
   text-align: left;
   max-width: 800px;
-}
-
-.Whatwedo{
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  background-color: color.get-color('content-container');
-  padding: 1rem;
-  width: 50%;
-  border-radius: 5rem;
-  border-style: groove;
 }
 
 
@@ -125,4 +114,38 @@ section a {
 .Contactbutton{
   color: orange;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.text-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: color.get-color('content-container');
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 50%;
+  border-radius: 5rem;
+  border-style: groove;
+  .title-background {
+      background-color: color.get-color('title-background');
+      width: auto;
+      border-radius: 5rem 5rem 0 0;
+  }
+}
+
+.text-container-team {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: color.get-color('content-container');
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 50%;
+  border-radius: 1rem;
+  border-style: groove;
+  .title-background {
+    background-color: color.get-color('title-background');
+    width: auto;
+    border-radius: 1rem 1rem 0 0;
+}
 }

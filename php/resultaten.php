@@ -92,11 +92,11 @@ $result = $conn->query($sql);
             echo "<p> </p>";
             echo "<p> </p>";
             if($selectedColumn == "Mogelijk_adhd"){
-                echo "<p>Percentage wel $selectedColumn: $truePercentage%</p>";
-                echo "<p>Percentage niet $selectedColumn: $truePercentage%</p>";
+                echo "<p>Percentage wel $selectedColumn:" . round($truePercentage) . "%</p>";
+                echo "<p>Percentage niet $selectedColumn:" . round($falsePercentage) . "%</p>";
             } else {
-                echo "<p>Percentage 'true' antwoorden voor $selectedColumn: $truePercentage%</p>";
-                echo "<p>Percentage 'false' antwoorden voor $selectedColumn: $falsePercentage%</p>";
+                echo "<p>Percentage 'true' antwoorden voor $selectedColumn:" . round($truePercentage) . "%</p>";
+                echo "<p>Percentage 'false' antwoorden voor $selectedColumn:" . round($falsePercentage) . "%</p>";
             }
         }
 
