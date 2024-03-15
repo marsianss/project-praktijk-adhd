@@ -138,6 +138,9 @@ section a {
       width: auto;
       border-radius: 5rem 5rem 0 0;
   }
+  li{
+    font-weight: bold;
+  }
 }
 
 .text-container-team {
@@ -155,4 +158,7 @@ section a {
     width: auto;
     border-radius: 1rem 1rem 0 0;
 }
+}
+
+.active{
 }
