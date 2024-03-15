@@ -12,8 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (!empty($missingFields)) {
         $missingFieldsList = implode(', ', $missingFields);
-        echo "Niet alle vereiste velden zijn ingevuld: $missingFieldsList";
-        header('Refresh: 3.5; url=../html/quiz.html');
         exit; // Stop the script execution
     }
 
@@ -68,11 +66,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Redirect naar index.html na 3.5 seconden
         //header('Refresh: 3.5; url=../html/index.html');
+        ?>
+        <a href="../html/quiz.html">return to quiz</a>
+        <?php
     } else {
         echo "Er is een fout opgetreden bij het opslaan van de gegevens";
-        header('Refresh: 3.5; url=../html/quiz.html');
     }
 } else {
     echo "Geen POST-verzoek ontvangen";
     header('Refresh: 3.5; url=../html/quiz.html');
 }
+?>
