@@ -32,6 +32,11 @@ body {
                     width: auto;
                     border-radius: 1rem 1rem 0 0;
                 }
+                .title-background-lower{
+                    background-color: color.get-color('title-background');
+                    width: auto;
+                    border-radius: 0 0 0 0;
+                }
                 h2 {
                     margin: 0.5rem;
                     margin-top: 1rem;
