@@ -25,64 +25,67 @@ $result = $conn->query($sql);
     <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/resultaten.css">
 </head>
-<body>
-    <h2>ADHD Resultaten</h2>
-    <table>
-        <tr>
-            <th>Naam</th>
-            <th>E-mail</th>
-            <th>q1</th>
-            <th>q2</th>
-            <th>q3</th>
-            <th>q4</th>
-            <th>q5</th>
-            <th>q6</th>
-            <th>q7</th>
-            <th>q8</th>
-            <th>q9</th>
-            <th>q10</th>
-            <th>Mogelijk ADHD</th>
-        </tr>
-        <?php
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-                    // Toon de gegevens in de tabel met "true" of "false"
-                    echo "<tr><td>" . $row["fullname"] . "</td><td>" . $row["email"] . "</td>";
-                    echo "<td>" . ($row["q1"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q2"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q3"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q4"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q5"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q6"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q7"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q8"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q9"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["q10"] ? "true" : "false") . "</td>";
-                    echo "<td>" . ($row["Mogelijk_adhd"] ? "Ja" : "Nee") . "</td></tr>";
+    <div class="container">
+        <h2>ADHD Resultaten</h2>
+        <table>
+            <tr>
+                <th>Naam</th>
+                <th>E-mail</th>
+                <th>q1</th>
+                <th>q2</th>
+                <th>q3</th>
+                <th>q4</th>
+                <th>q5</th>
+                <th>q6</th>
+                <th>q7</th>
+                <th>q8</th>
+                <th>q9</th>
+                <th>q10</th>
+                <th>Mogelijk ADHD</th>
+            </tr>
+            <?php
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        // Toon de gegevens in de tabel met "true" of "false"
+                        echo "<tr><td>" . $row["fullname"] . "</td><td>" . $row["email"] . "</td>";
+                        echo "<td>" . ($row["q1"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q2"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q3"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q4"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q5"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q6"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q7"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q8"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q9"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["q10"] ? "true" : "false") . "</td>";
+                        echo "<td>" . ($row["Mogelijk_adhd"] ? "Ja" : "Nee") . "</td></tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='13'>Geen resultaten gevonden</td></tr>";
                 }
-            } else {
-                echo "<tr><td colspan='13'>Geen resultaten gevonden</td></tr>";
-            }
-            $conn->close();
-            ?>
-    </table>
-    <br>
-    <form method="post" action="">
-        <label for="column">Procent wel/niet van:</label>
-        <select name="column" id="column">
-            <option value="q1">q1</option>
-            <option value="q2">q2</option>
-            <option value="q3">q3</option>
-            <option value="q4">q4</option>
-            <option value="q5">q5</option>
-            <option value="q6">q6</option>
-            <option value="q7">q7</option>
-            <option value="q8">q8</option>
-            <option value="q9">q9</option>
-            <option value="q10">q10</option>
-            <option value="Mogelijk_adhd">Mogelijk_adhd</option>
-        </select>
+                $conn->close();
+                ?>
+            </table>
+        </div>
+        <br>
+        <div class="reken-container">
+        <form method="post" action="">
+            <label for="column">Procent wel/niet van:</label>
+            <select name="column" id="column">
+                <option value="q1">q1</option>
+                <option value="q2">q2</option>
+                <option value="q3">q3</option>
+                <option value="q4">q4</option>
+                <option value="q5">q5</option>
+                <option value="q6">q6</option>
+                <option value="q7">q7</option>
+                <option value="q8">q8</option>
+                <option value="q9">q9</option>
+                <option value="q10">q10</option>
+                <option value="Mogelijk_adhd">Mogelijk_adhd</option>
+            </select>
         <input type="submit" value="Bereken percentage">
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -114,7 +117,8 @@ $result = $conn->query($sql);
         }
     ?>
     </form>
+    </div>
     <br>
-    <a href="../html/index.html">Return to Home Page</a>
+    <a href="../html/index.html" class="bottom-link">Return to Home Page</a>
 </body>
 </html>

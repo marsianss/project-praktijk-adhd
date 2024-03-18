@@ -17,7 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Voorbereiden van de SQL-query
     $sql = "INSERT INTO adhd_responses (fullname, email, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
-            VALUES (:fullname, :email, :q1, :q2, :q3, :q4, :q5, :q6, :q7, :q8, :q9, :q10)";
+            VALUES (:fullname, :email, :q1, :q2, :q3, :q4, :q5, :q6, :q7, :q8, :q9, :q10)
+            ON DUPLICATE KEY UPDATE q1 = VALUES(q1), q2 = VALUES(q2), q3 = VALUES(q3), q4 = VALUES(q4),
+            q5 = VALUES(q5), q6 = VALUES(q6), q7 = VALUES(q7), q8 = VALUES(q8), q9 = VALUES(q9), q10 = VALUES(q10),
+            Mogelijk_adhd = VALUES(Mogelijk_adhd)";
     
     $statement = $pdo->prepare($sql);
     
@@ -54,8 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $possible_adhd = $num_checked > 5 ? 1 : 0; // Indien geen ADHD, zet de waarde op 0
         }
         
-        echo $message;
-        
         // Update de database met de mogelijke ADHD-waarde
         $update_sql = "UPDATE adhd_responses SET Mogelijk_adhd = :possible_adhd WHERE fullname = :fullname AND email = :email";
         $update_statement = $pdo->prepare($update_sql);
@@ -67,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Redirect naar index.html na 3.5 seconden
         //header('Refresh: 3.5; url=../html/index.html');
         ?>
-        <a href="../html/quiz.html">return to quiz</a>
+        
         <?php
     } else {
         echo "Er is een fout opgetreden bij het opslaan van de gegevens";
@@ -77,3 +78,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Refresh: 3.5; url=../html/quiz.html');
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultaat quiz</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/create.css">
+    <link rel="icon" href="../img/icon.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="col-2 button"><a href="../html/index.html">Home <span></span></a></li>
+            <li class="col-2 button"><a href="../html/information.html">Informatie <span></span></a></li>
+            <li class="col-2 button"><a href="../html/tips.html">Tips <span></span></a></li>
+            <li class="col-2 button"><a href="../html/faq.html">FAQ <span></span></a></li>
+            <li class="col-2 button"><a href="../html/aboutus.html">About Us <span></span></a></li>
+            <li class="col-2 button"><a href="../html/contact.html">Contact <span></span></a></li>
+            <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <p><?php echo $message; ?></p>
+        <a href="../html/quiz.html">keer terug naar Quiz</a>
+    </div>
+</body>
+</html>

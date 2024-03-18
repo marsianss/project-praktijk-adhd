@@ -41,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             echo "Ongeldige gebruikersnaam of wachtwoord.";
+            header('Refresh: 2; url=../html/login.html');
         }
     }
 }
