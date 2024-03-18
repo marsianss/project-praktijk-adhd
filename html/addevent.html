@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/information.css">
+    <link rel="stylesheet" href="../css/addevent.css">
+</head>
+<body>
+    <header>
+        <div class="hero-img">
+          <img src="../img/icon.png" alt="logo" class="logoHero">
+          <div class="hero-text">
+            <h1>ClearMinds Nederland</h1>
+        </div>
+        <nav>
+          <ul>
+              <li class="col-2 button"><a href="index.html">Home<span></span></a></li>
+              <li class="col-2 button"><a href="information.html">Informatie<span></span></a></li>
+              <li class="col-2 button"><a href="tips.html">Tips<span></span></a></li>
+              <li class="col-2 button"><a href="faq.html">Faq<span></span></a></li>
+              <li class="col-2 button"><a href="aboutus.html">About us<span></span></a></li>
+              <li class="col-2 button"><a href="contact.html">Contact<span></span></a></li>
+              <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
+          </ul>
+      </nav>
+    </header>
+
+<h2>Voeg je eigen evenement toe!</h2>
+
+<div class="container">
+    <form action="#" method="post">
+        <label for="event_name">Evenement Naam:</label><br>
+        <input type="text" id="event_name" name="event_name" required><br>
+
+        <label for="event_desc">Evenement Beschrijving:</label><br>
+        <input type="text" id="event_desc" name="event_desc" required><br>
+
+        <label for="event_location">Evenement Locatie:</label><br>
+        <input type="text" id="event_location" name="event_location" required><br>
+
+        <label for="event_date">Event Date and Time:<br></label>
+        <input type="datetime-local" id="event_date" name="event_date" required><br>
+        
+
+        <input type="submit" value="Add Event">
+    </form>
+
+</body>
+</html>
