@@ -38,3 +38,12 @@ body {
         }
     }
 }
+
+video { 
+    position: static;
+    z-index: 0;
+}
+
+nav { 
+    z-index: 1; 
+}
