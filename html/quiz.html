@@ -25,7 +25,7 @@
 <!--quiz-->
   <div class="container">
     <h1>ADHD Questionnaire</h1>
-    <form id="adhdForm" method="post" action="../php/create.php">
+    <form id="adhdForm" method="post" action="../php/create.php" onsubmit="return checkForm()">
       <label for="fullname">Volledige naam: </label>
       <input type="text" name="fullname" id="fullname" required><br><br>
 
@@ -122,7 +122,7 @@
       </div>
       <br>
 
-      <input id="button" type="submit" value="Check ADHD" onclick="checkADHD()">
+      <input id="button" type="submit" value="Check ADHD" onclick="checkForm()">
     </form>
     <div id="result"></div>
     <br><br>
@@ -155,6 +155,39 @@
     }
     window.onload = function() {
             document.body.style.display = "block";
+    }
+  </script>
+  <script>
+    function checkForm() {
+      var allQuestionsAnswered = true;
+
+      // Loop through each question and check if an answer is selected
+      for (var i = 1; i <= 10; i++) {
+        var radioGroup = document.getElementsByName('q' + i);
+        var anyChecked = false;
+
+        // Check if at least one option is selected for the current question
+        for (var j = 0; j < radioGroup.length; j++) {
+          if (radioGroup[j].checked) {
+            anyChecked = true;
+            break;
+          }
+        }
+
+        // If no option is selected, mark that not all questions are answered
+        if (!anyChecked) {
+          allQuestionsAnswered = false;
+          break;
+        }
+      }
+
+      // Show an alert if not all questions are answered
+      if (!allQuestionsAnswered) {
+        alert("Gelieve alle vragen te beantwoorden voordat u het formulier verzendt.");
+        return false; // Stop form submission
+      } else {
+        return true; // Submit the form if all questions are answered
+      }
     }
   </script>
 </body>
