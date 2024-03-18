@@ -276,7 +276,7 @@ section a {
 }
 
 .Oorzaken-img{
-  border-radius: 2rem;
+  border-radius: 0rem 0rem 1rem 1rem;
 }
 
 .Introtext p{
@@ -331,3 +331,23 @@ section a {
 .dropdown-content a:hover {background-color: #e8dcdc;}
 .dropdown:hover .dropdown-content {display: block;}
 
+.text-container{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: color.get-color('content-container');
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 52%;
+  border-radius: 1rem;
+  padding: 0%;
+  border-style: groove;
+  .title-background {
+      background-color: color.get-color('title-background');
+      width: auto;
+      border-radius: 1rem 1rem 0 0;
+  }
+  p{
+    text-align: center;
+  }
+}
