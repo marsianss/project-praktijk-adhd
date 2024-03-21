@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 11 mrt 2024 om 15:33
+-- Gegenereerd op: 21 mrt 2024 om 09:44
 -- Serverversie: 8.0.31
 -- PHP-versie: 8.0.26
 
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `adhd_responses` (
   `email` varchar(255) DEFAULT NULL,
   `Mogelijk_adhd` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `adhd_responses`
@@ -55,7 +55,12 @@ INSERT INTO `adhd_responses` (`id`, `q1`, `q2`, `q3`, `q4`, `q5`, `q6`, `q7`, `q
 (26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'mr. poopiebutthole', 'ooowwiiee@gmail.nl', 0),
 (28, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 'john doe', 'anonymous@gmail', 0),
 (29, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'tester001', 'crilledgheese1@gmail.com', 1),
-(36, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 'Shiba-inu', 'Doge@gmail.wow', 1);
+(36, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 'Shiba-inu', 'Doge@gmail.wow', 1),
+(37, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 'tester 5', 'superEarth@malevolentbay.com', 1),
+(38, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 'Henry Howard Holmes', 'HHHChicago@gmail.com', 1),
+(41, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 'Ed Gein', 'LeatherFace1906@gmial.com', 1),
+(42, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 'Fred Krueger', 'Sweaterman1938@gmail.com', 0),
+(56, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 'Henry Howard Holmes', 'HHHChicago@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -77,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 (2, 'Justin', '$2y$10$UZl23EL904LObUHMRECgguO21wFkXlejgmWA/W8kNxIem1bR4uKsK'),
-(3, 'Wassim', 'balzak123');
+(3, 'Wassim', '$2y$10$i2gzS65nf6s7.63EBBL2A.Y0Dz7LBjQ9dUFw9qnlTaOEacJFEMtPe');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
