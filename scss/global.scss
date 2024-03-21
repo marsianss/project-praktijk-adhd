@@ -64,6 +64,9 @@ nav{
                     transition: .5s;
                 }
             }
+            a.active {
+                text-decoration: underline;
+            }
             a:hover {
                 color: color.get-color('navbar-hover');
                     span {
