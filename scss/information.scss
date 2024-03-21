@@ -252,17 +252,29 @@ section {
   height: auto;
 }
 
-section a {
+#text {
+  margin: auto; 
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.source-button:hover{
+  background-color: color.get-color('inpage-button-hover');
+}
+.source-button {
   text-decoration: none;
   color: color.get-color('button-text');
   font-weight: bold;
   font-family: Verdana;
-  margin: auto;
-  background-color: color.get-color('inpage-button');
   margin-top: 1rem;
-  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: color.get-color('inpage-button');
+  padding: 0.5rem; 
   border-radius: 0.5rem;
+  display: inline-block; 
+  margin-right: 0.5rem; 
 }
+
 
 .logoInfo {
 
@@ -342,6 +354,7 @@ section a {
   border-radius: 1rem;
   padding: 0%;
   border-style: groove;
+
   .title-background {
       background-color: color.get-color('title-background');
       width: auto;
