@@ -45,7 +45,7 @@ body{
         border-style: groove;
     }
     .bottom-link {
-        bottom: 10px; 
+        bottom: 10rem; 
         left: 10px; 
         background-color: #4caf50;
         color: #fff;
@@ -55,4 +55,9 @@ body{
         cursor: pointer;
         text-decoration: none;
     }
+    .graph{
+        width: 65%; 
+        height: auto;
+    }
+    
 }

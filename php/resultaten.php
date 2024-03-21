@@ -26,6 +26,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/resultaten.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.js" integrity="sha512-n8DscwKN6+Yjr7rI6mL+m9nS4uCEgIrKRFcP0EOkIvzOLUyQgOjWK15hRfoCJQZe0s6XrARyXjpvGFo1w9N3xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
     <div class="container">
         <h2>ADHD Resultaten</h2>
@@ -118,7 +119,41 @@ $result = $conn->query($sql);
     ?>
     </form>
     </div>
-    <br>
+    <div class="graph">
+        <canvas id="myChart"></canvas>
+    </div>
     <a href="../html/index.html" class="bottom-link">Return to Home Page</a>
+    <script>
+        let truePercentage = <?php echo $truePercentage; ?>;
+        let falsePercentage = <?php echo $falsePercentage; ?>;
+
+        const data = {
+            labels: ['True', 'False'],
+            datasets: [{
+                label: 'Percentage',
+                data: [truePercentage, falsePercentage],
+                backgroundColor: ['rgb(66, 221, 245)', 'rgb(245, 66, 66)'] // Blue for True, Red for False
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        };
+
+        const chart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+    
 </body>
 </html>
