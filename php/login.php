@@ -24,6 +24,7 @@ foreach ($users as $user) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $page = $_POST['page'];
 
     $sql = "SELECT * FROM admin WHERE username=:username";
     $statement = $pdo->prepare($sql);
@@ -37,7 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION['username'] = $username;
             // Doorsturen naar resultaten.php
-            header("Location: ../php/resultaten.php");
+            if ($page == "event") {
+                header("Location: ../html/addevent.html");
+            } else {
+                header("Location: ../php/resultaten.php");
+            }
+            
             exit();
         } else {
             echo "Ongeldige gebruikersnaam of wachtwoord.";
