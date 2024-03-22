@@ -36,6 +36,7 @@ body {
                     background-color: color.get-color('title-background');
                     width: auto;
                     border-radius: 0 0 0 0;
+                    margin-bottom: 1rem;
                 }
                 h2 {
                     margin: 0.5rem;
@@ -59,4 +60,19 @@ body {
 
 h1, h2{
     color: color.get-color('title-color');
+}
+
+.Contactbutton:hover{
+  background-color: color.get-color('inpage-button-hover');
+}
+.Contactbutton{
+  text-decoration: none;
+  color: color.get-color('button-text');
+  font-weight: bold;
+  font-family: Verdana;
+  margin: auto;
+  background-color: color.get-color('inpage-button');
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
