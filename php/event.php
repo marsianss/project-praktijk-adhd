@@ -9,40 +9,62 @@ try {
     exit;
 }
 
-// Controleer of er POST-gegevens zijn verzonden
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Controleer of alle vereiste velden zijn ingestuurd
-    $requiredFields = ['event_name', 'event_desc', 'event_location', 'event_date'];
-    $missingFields = array_diff($requiredFields, array_keys($_POST));
-    
-    if (!empty($missingFields)) {
-        $missingFieldsList = implode(', ', $missingFields);
-        echo "Ontbrekende velden: " . $missingFieldsList;
-        exit; // Stop de uitvoering van het script
-    }
+// Query om alle evenementen op te halen
+$sql = "SELECT * FROM events";
+$statement = $pdo->prepare($sql);
+$statement->execute();
+$events = $statement->fetchAll(PDO::FETCH_ASSOC);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenementen & Ondersteuningsgroepen</title>
+    <link rel="stylesheet" href="../css/event.css">
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+    <header>
+        <div class="hero-img">
+          <img src="../img/icon.png" alt="logo" class="logoHero">
+          <div class="hero-text">
+            <h1>ClearMinds Nederland</h1>
+        </div>
+        <nav>
+          <ul>
+              <li class="col-2 button"><a href="index.html">Home<span></span></a></li>
+              <li class="col-2 button"><a href="information.html">Information<span></span></a></li>
+              <li class="col-2 button"><a href="tips.html">Tips<span></span></a></li>
+              <li class="col-2 button"><a href="faq.html">Faq<span></span></a></li>
+              <li class="col-2 button"><a href="aboutus.html">About us<span></span></a></li>
+              <li class="col-2 button"><a href="contact.html">Contact<span></span></a></li>
+              <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
+          </ul>
+      </nav>
+    </header>
+    <h1>Evenementen & Bijeenkomsten</h1>
+        
+    <?php foreach ($events as $event): ?>
+    <section class="Whoaretext">
+        <h2><?php echo $event['event_name']; ?></h2>
+        <p>
+            <?php echo $event['event_desc']; ?><br>
+            Datum en tijd: <?php echo $event['event_date']; ?><br>
+            Meer informatie: <a href="">Meer informatie</a>
+        </p>
+        <div id="contact-container">
+            <iframe src="<?php echo $event['event_location']; ?>"
+                    width="700px"
+                    height="100%"
+                    style="border: 0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+<?php endforeach; ?>
+</main> 
 
-    // Voorbereiden van de SQL-query
-    $sql = "INSERT INTO events (event_name, event_desc, event_location, event_date)
-            VALUES (:event_name, :event_desc, :event_location, :event_date)";
-
-    $statement = $pdo->prepare($sql);
-
-    // Binden van waarden aan de voorbereide verklaring
-    $statement->bindParam(':event_name', $_POST['event_name'], PDO::PARAM_STR);
-    $statement->bindParam(':event_desc', $_POST['event_desc'], PDO::PARAM_STR);
-    $statement->bindParam(':event_location', $_POST['event_location'], PDO::PARAM_STR);
-    $statement->bindParam(':event_date', $_POST['event_date'], PDO::PARAM_STR);
-
-    // Uitvoeren van de query
-    if ($statement->execute()) {
-        echo "<script>
-                setTimeout(function() {
-                    window.location.href = '../html/addevent.html';
-                    alert('Evenement succesvol toegevoegd aan de database.');
-                }, 100);
-              </script>";
-    } else {
-        echo "Er is een probleem opgetreden bij het toevoegen van het evenement aan de database.";
-    }
-
-}
+</body>
+</html>
