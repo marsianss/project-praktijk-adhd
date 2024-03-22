@@ -10,7 +10,7 @@ try {
 }
 
 // Query om alle evenementen op te halen
-$sql = "SELECT * FROM events";
+$sql = "SELECT * FROM events order by event_date asc";
 $statement = $pdo->prepare($sql);
 $statement->execute();
 $events = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -23,6 +23,7 @@ $events = $statement->fetchAll(PDO::FETCH_ASSOC);
     <title>Evenementen & Ondersteuningsgroepen</title>
     <link rel="stylesheet" href="../css/event.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="icon" href="../img/icon.png">
 </head>
 <body>
     <header>
@@ -33,12 +34,12 @@ $events = $statement->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <nav>
           <ul>
-              <li class="col-2 button"><a href="index.html">Home<span></span></a></li>
-              <li class="col-2 button"><a href="information.html">Information<span></span></a></li>
-              <li class="col-2 button"><a href="tips.html">Tips<span></span></a></li>
-              <li class="col-2 button"><a href="faq.html">Faq<span></span></a></li>
-              <li class="col-2 button"><a href="aboutus.html">About us<span></span></a></li>
-              <li class="col-2 button"><a href="contact.html">Contact<span></span></a></li>
+              <li class="col-2 button"><a href="../html/index.html">Home<span></span></a></li>
+              <li class="col-2 button"><a href="../html/information.html">Information<span></span></a></li>
+              <li class="col-2 button"><a href="../html/tips.html">Tips<span></span></a></li>
+              <li class="col-2 button"><a href="../html/faq.html">Faq<span></span></a></li>
+              <li class="col-2 button"><a href="../html/aboutus.html">About us<span></span></a></li>
+              <li class="col-2 button"><a href="../html/contact.html">Contact<span></span></a></li>
               <li class="col-2"><img src="../img/icon.png" alt="icon"></li>
           </ul>
       </nav>
