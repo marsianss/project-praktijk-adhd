@@ -65,6 +65,7 @@ $events = $statement->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </section>
 <?php endforeach; ?>
+<button><a href="addeventPage.php">voeg een event toe</a></button>
 </main> 
 
 </body>

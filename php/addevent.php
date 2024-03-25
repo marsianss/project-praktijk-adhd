@@ -37,12 +37,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($statement->execute()) {
         echo "<script>
                 setTimeout(function() {
-                    window.location.href = '../html/addevent.html';
+                    window.location.href = '../php/addeventPage.php';
                     alert('Evenement succesvol toegevoegd aan de database.');
                 }, 100);
               </script>";
     } else {
         echo "Er is een probleem opgetreden bij het toevoegen van het evenement aan de database.";
     }
+    
 
 }
