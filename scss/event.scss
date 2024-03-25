@@ -139,3 +139,28 @@ body {
 h1, h2{
     color: color.get-color('title-color');
 }
+.contact-section {
+  margin-top: 20px; // Adjust margin as needed
+  text-align: center;
+  margin-bottom: 40px;
+
+  .contact-link {
+      a {
+          display: inline-block;
+          padding: 10px 20px; // Adjust padding as needed
+          font-size: 16px; // Adjust font size as needed
+          background-color: #45a049; // Button color
+          color: #fff;
+          text-decoration: none;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease; // Added transform transition
+
+          &:hover {
+              background-color: #45a049; // Darker color on hover
+              transform: translateY(-3px); // Move the button up slightly on hover
+          }
+      }
+  }
+}
