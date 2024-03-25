@@ -8,28 +8,36 @@
     <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/global.css">
-    <style>      
-    #contact-container {
+    <style>
+        /* Existing styles remain unchanged */
+
+        #contact-container {
         max-width: 800px;
         margin: 0 auto;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s forwards;
     }
 
-    #googleMap {
-        width: 100%;
-        height: 300px;
-        border: 1;
-        margin-top: 40px;
-        position: relative;
-        z-index: 2;
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
+
+    /* Bijgewerkte contact-formulierstijlen */
 
     #contact-form {
         margin-top: 20px;
         text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s forwards;
     }
 
     #contact-form h2 {
@@ -46,6 +54,7 @@
     #contact-form label {
         margin-bottom: 5px;
         font-size: 14px;
+        color: #555;
     }
 
     #contact-form input,
@@ -54,6 +63,14 @@
         padding: 8px;
         margin-bottom: 10px;
         font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s;
+    }
+
+    #contact-form input:focus,
+    #contact-form textarea:focus {
+        border-color: #4CAF50;
     }
 
     #contact-form button {
@@ -63,11 +80,21 @@
         border: none;
         cursor: pointer;
         font-size: 16px;
-        
+        transition: background-color 0.3s, transform 0.2s;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #contact-form button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
     }
 
     main {
-        margin: 20px; 
+        margin: 20px;
+    }
+
+    #googleMap iframe {
+        border: 2px solid #b3f5bc; /* Kies hier de gewenste stijl en kleur voor de border */
     }
     </style>
 </head>
@@ -98,7 +125,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.8499890083185!2d5.099612576471904!3d52.06425507194524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c665948a2073bf%3A0xb8405acd63a12ee1!2sMBO%20Utrecht!5e0!3m2!1sen!2snl!4v1707385511798!5m2!1sen!2snl"
                     width="100%"
                     height="100%"
-                    style="border: 0;"
+                
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -118,7 +145,8 @@
 
                     <div class="verstuur">
                         <a href="#" class="verstuur-button">
-                            <button>verstuur</button>
+                                <button onclick="submitForm()">Verstuur</button>
+      
                         </a>
                     </div>
                 </form>
