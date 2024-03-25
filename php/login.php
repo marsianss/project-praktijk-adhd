@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $username;
             // Doorsturen naar resultaten.php
             if ($page == "event") {
-                header("Location: ../html/addevent.html");
+                header("Location: ../php/addeventPage.php");
             } else {
                 header("Location: ../php/resultaten.php");
             }

@@ -65,7 +65,11 @@ $events = $statement->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </section>
 <?php endforeach; ?>
-<button><a href="addeventPage.php">voeg een event toe</a></button>
+<section class="contact-section">
+                    <div class="contact-link">
+                        <a href="../html/login-events.html">Add events</a>
+                    </div>
+                </section> 
 </main> 
 
 </body>
